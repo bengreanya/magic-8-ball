@@ -33,3 +33,6 @@ header .logo {
 main {
     padding: 20px;
 }
+.hide {
+    display: none;
+}

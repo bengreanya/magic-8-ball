@@ -10,7 +10,7 @@
 
 // (don't forget to call any display functions you want to run on page load!)
 const submitBtn = document.getElementById('submit');
-const resetBtn = document.getElementbyId('reset');
+const resetBtn = document.getElementById('reset');
 const promptSection = document.getElementById('prompt');
 const fortuneSection = document.getElementById('fortune');
 const answerP = document.getElementById('answer');
@@ -41,12 +41,11 @@ const answers = [
 function toggleSections() {
     promptSection.classList.toggle('hide');
     fortuneSection.classList.toggle('hide');
-submitBtn.addEventListener('click', () => {
-    toggleSections();
+    submitBtn.addEventListener('click', () => {
+        toggleSections();
+    });
 }
-}
+
 const randInt = Math.floor(Math.random() * answers.length);
 const randomChoice = answers[randInt];
 answerP.textContent = randomChoice;
-});
-

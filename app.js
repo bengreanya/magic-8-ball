@@ -37,3 +37,16 @@ const answers = [
     'Outlook not so good',
     'Very doubtful',
 ];
+
+function toggleSections() {
+    promptSection.classList.toggle('hide');
+    fortuneSection.classList.toggle('hide');
+submitBtn.addEventListener('click', () => {
+    toggleSections();
+}
+}
+const randInt = Math.floor(Math.random() * answers.length);
+const randomChoice = answers[randInt];
+answerP.textContent = randomChoice;
+});
+

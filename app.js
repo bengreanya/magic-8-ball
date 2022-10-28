@@ -14,8 +14,6 @@ const resetBtn = document.getElementById('reset');
 const promptSection = document.getElementById('prompt');
 const fortuneSection = document.getElementById('fortune');
 const answerP = document.getElementById('answer');
-
-function doSomething() {}
 const answers = [
     'Yes, definitely',
     'It is certain',
@@ -38,14 +36,10 @@ const answers = [
     'Very doubtful',
 ];
 
-function toggleSections() {
+submitBtn.addEventListener('click', () => {
     promptSection.classList.toggle('hide');
     fortuneSection.classList.toggle('hide');
-    submitBtn.addEventListener('click', () => {
-        toggleSections();
-    });
-}
-
-const randInt = Math.floor(Math.random() * answers.length);
-const randomChoice = answers[randInt];
-answerP.textContent = randomChoice;
+    const randInt = Math.floor(Math.random() * answers.length);
+    const randomChoice = answers[randInt];
+    answerP.textContent = randomChoice;
+});
